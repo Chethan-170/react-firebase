@@ -11,13 +11,18 @@ const DashBoard = ()=>{
                 <Grid item className={classes.gridItem} lg={8} md={12}>
                     <Card>
                         <CardContent style={{padding:'0'}}>
-                            <div className={classes.cardTitle}>Card Title</div>
-                            <h3>Card Title</h3>
+                            <div className={classes.cardTitle}>Project Lists</div>
+                            <div className={classes.cardBody}>Card Body</div>
                         </CardContent>
                     </Card>
                 </Grid>
                 <Grid item className={classes.gridItem} lg={4} md={12}>
-                    <h1 style={{backgroundColor:'black'}}>bYE</h1>
+                    <Card>
+                        <CardContent style={{padding:'0'}}>
+                            <div className={classes.cardTitle} style={{textAlign:'center'}}>Notifications</div>
+                            <div className={classes.cardBody}>Card Body</div>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
         </Container>
