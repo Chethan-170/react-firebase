@@ -9,7 +9,7 @@ const myStyle = makeStyles((theme)=>({
     cardTitle:{        
         padding: '17px 15px',
         margin: 0,
-        backgroundColor: '#9c27b0',
+        backgroundColor: '#2196f3',
         color: 'white',
         fontSize: '20px',
         fontWeight: 'bold'
@@ -23,7 +23,7 @@ const myStyle = makeStyles((theme)=>({
     cardTitleSecondary:{        
         padding: '10px',
         margin: 0,
-        backgroundColor: '#2196f3',
+        backgroundColor: '#78909c',
         color: 'white',
         fontSize: '20px',
         fontWeight: 'bold'
@@ -39,7 +39,7 @@ const myStyle = makeStyles((theme)=>({
     },
     formControl:{
         width: '100%',
-        margin: '10px 5px'
+        margin: '10px 0px'
     },
     button:{
         margin: '15px 0px'
