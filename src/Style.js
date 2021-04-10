@@ -30,6 +30,22 @@ const myStyle = makeStyles((theme)=>({
     },
     cardBodySecondary:{
         margin: '15px'
+    },
+    authCardContainer:{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 500
+    },
+    formControl:{
+        width: '100%',
+        margin: '10px 5px'
+    },
+    button:{
+        margin: '15px 0px'
+    },
+    floatRight:{
+        float: 'right'
     }
 }));
 export default myStyle;

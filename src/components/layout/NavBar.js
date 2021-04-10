@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   title: {
-    flexGrow: 1,
+    flexGrow: 1
   }
 }));
 
@@ -24,7 +24,7 @@ function NavBar(props) {
     <div className={classes.root}>
         <AppBar position="static">
             <Toolbar>
-                <IconButton edge="start" color="inherit" aria-label="menu">
+                <IconButton onClick={()=>{props.history.push('/')}}  edge="start" color="inherit" aria-label="menu">
                     <SvgIcon>
                         <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
                     </SvgIcon>
@@ -33,7 +33,7 @@ function NavBar(props) {
                     Dashboard
                 </Typography>
                 <SignInLinks/>
-                {/* <SignOutLinks/> */}
+                <SignOutLinks/>
             </Toolbar>
         </AppBar>
     </div>
