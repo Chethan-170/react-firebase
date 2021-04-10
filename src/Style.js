@@ -16,6 +16,20 @@ const myStyle = makeStyles((theme)=>({
     },
     cardBody:{
         margin: '20px'
+    },
+    cardFooter:{
+        margin: '20px'
+    },
+    cardTitleSecondary:{        
+        padding: '10px',
+        margin: 0,
+        backgroundColor: '#2196f3',
+        color: 'white',
+        fontSize: '20px',
+        fontWeight: 'bold'
+    },
+    cardBodySecondary:{
+        margin: '15px'
     }
 }));
 export default myStyle;

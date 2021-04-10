@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 import SvgIcon from '@material-ui/core/SvgIcon';
 import SignInLinks from './SignInLinks';
 import SignOutLinks from './SignOutLinks';
+import { withRouter } from 'react-router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function NavBar() {
+function NavBar(props) {
   const classes = useStyles();
   return (
     <div className={classes.root}>
@@ -38,3 +39,4 @@ export default function NavBar() {
     </div>
   );
 }
+export default withRouter(NavBar);
