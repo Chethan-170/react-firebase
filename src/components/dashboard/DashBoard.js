@@ -2,6 +2,7 @@ import { Container,Grid } from '@material-ui/core';
 import { Card,CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import myStyle from '../../Style';
+import Notifications from './Notifications';
 
 const DashBoard = ()=>{
     const classes = myStyle();
@@ -17,12 +18,7 @@ const DashBoard = ()=>{
                     </Card>
                 </Grid>
                 <Grid item className={classes.gridItem} lg={4} md={12}>
-                    <Card>
-                        <CardContent style={{padding:'0'}}>
-                            <div className={classes.cardTitle} style={{textAlign:'center'}}>Notifications</div>
-                            <div className={classes.cardBody}>Card Body</div>
-                        </CardContent>
-                    </Card>
+                    <Notifications/>
                 </Grid>
             </Grid>
         </Container>
