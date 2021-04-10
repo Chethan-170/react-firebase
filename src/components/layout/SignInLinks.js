@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
 import Button from '@material-ui/core/Button'
 import Avatar from '@material-ui/core/Avatar';
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,10 +13,11 @@ const useStyles = makeStyles((theme)=>({
 }))
 const SignInLinks = (props)=>{
     const classes = useStyles();
+    const handleLogout = () => props.dialogHandler(true);    
     return(
         <Fragment>
             <Button color="inherit"  onClick={()=>{props.history.push('new')}}>New Project</Button>
-            <Button color="inherit">Logout</Button>
+            <Button color="inherit" onClick={handleLogout}>Logout</Button>
             <Avatar className={classes.orange}>CN</Avatar>
         </Fragment>
     )
