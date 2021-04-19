@@ -7,16 +7,15 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import LogOutDialogContext from '../contexts/LogOutDialogContext';
 
-export default function Logout({isOpen,dialogHandler}) {
-    const obj = useContext(LogOutDialogContext);
-    console.log(obj);
+export default function Logout() {
+    const {dialogStatus ,setDialogStatus} = useContext(LogOutDialogContext);
     const handleClose = () => {
-        //setLogOutDialogStatus(false);
+        setDialogStatus(false);
     }
     return (
         <div>
             <Dialog
-            open={true}
+            open={dialogStatus}
             onClose={handleClose}
             aria-labelledby="draggable-dialog-title"
             >

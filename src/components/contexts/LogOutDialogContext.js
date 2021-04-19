@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 const LogOutDialogContext = createContext({
-    status: true,
+    status: false,
     setLogOutDialogStatus: ()=>{}
 });
 export default LogOutDialogContext;

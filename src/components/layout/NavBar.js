@@ -32,7 +32,7 @@ function NavBar(props) {
                 <Typography variant="h6" className={classes.title}>
                     Dashboard
                 </Typography>
-                <SignInLinks dialogHandler={props.dialogHandler}/>
+                <SignInLinks/>
                 {/* <SignOutLinks/> */}
             </Toolbar>
         </AppBar>
