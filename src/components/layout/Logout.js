@@ -1,21 +1,22 @@
-import React from 'react';
+import React , { useContext } from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import LogOutDialogContext from '../contexts/LogOutDialogContext';
 
 export default function Logout({isOpen,dialogHandler}) {
-    const [open, setOpen] = React.useState(false);
-    const handleClose = () => dialogHandler(false);
-    React.useEffect(()=>{
-       setOpen(isOpen);
-    },[isOpen]);
+    const obj = useContext(LogOutDialogContext);
+    console.log(obj);
+    const handleClose = () => {
+        //setLogOutDialogStatus(false);
+    }
     return (
         <div>
             <Dialog
-            open={open}
+            open={true}
             onClose={handleClose}
             aria-labelledby="draggable-dialog-title"
             >

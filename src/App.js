@@ -6,12 +6,15 @@ import Signin from './components/auth/Signin';
 import Signup from './components/auth/Signup';
 import CreateProject from './components/projects/CreateProject';
 import Logout from './components/layout/Logout';
-import { useState } from 'react';
+import { useContext } from 'react';
+import LogOutDialogContext from './components/contexts/LogOutDialogContext';
 
 export default function App() {
-  const [isLogoutOpen, setLogoutOpen] = useState(false);
+  const status = useContext(LogOutDialogContext);
+  console.log(status);
   return (
     <BrowserRouter>
+      <LogOutDialogContext.Provider>
         <NavBar dialogHandler={(status)=>{setLogoutOpen(status)}}/>
         <Switch>
           <Route exact path="/" component={DashBoard}/>
@@ -20,7 +23,8 @@ export default function App() {
           <Route exact path="/signup" component={Signup}/>
           <Route exact path="/new" component={CreateProject}/>
         </Switch>
-        <Logout isOpen={isLogoutOpen} dialogHandler={(status)=>{setLogoutOpen(status)}}/>
+        {/* <Logout isOpen={isLogoutOpen} dialogHandler={(status)=>{setLogoutOpen(status)}}/> */}
+      </LogOutDialogContext.Provider>
     </BrowserRouter>
   );
 }
