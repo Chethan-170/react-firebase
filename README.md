@@ -1,4 +1,1 @@
-# React Firebase
-### Initial Project Setup
-  - npm install
-  - npm start
+# React Firebase Under Development
